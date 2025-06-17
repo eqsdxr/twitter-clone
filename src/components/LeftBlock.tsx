@@ -1,20 +1,9 @@
 import { useState } from "react";
 
-import SearchSvg from "../assets/search.svg";
-import CrossSvg from "../assets/cross.svg";
-import FilledCross from "../assets/filled_cross.svg";
+import FillerSvg from "../assets/filler.svg";
 
-function NavBarElement({ text, img }) {
-  return (
-    <div className="flex gap-3 w-12">
-      <img src={img} />
-      {text}
-    </div>
-  );
-}
-
-function SearchBar() {
-  const { isShown, setIsShown } = useState(false);
+const SearchBar = () => {
+  const [isShown, setIsShown] = useState(false);
   return (
     <form>
       <div className="border-1 border-white flex h-12 text-white justify-between">
@@ -29,7 +18,7 @@ function SearchBar() {
           }}
         />
         <button type="button">
-          <img src={SearchSvg} />
+          <img src={FillerSvg} />
         </button>
       </div>
       {isShown && (
@@ -38,13 +27,13 @@ function SearchBar() {
             <span>Recent searches</span>
           </h4>
           <div>
-            <div tabindex="0" role="button">
+            <div role="button">
               <span>deutsch</span>
               <button>
-                <img src={CrossSvg} />
+                <img src={FillerSvg} />
               </button>
             </div>
-            <div tabindex="0" role="button">
+            <div role="button">
               <h4>
                 <span>Search options</span>
               </h4>
@@ -57,9 +46,9 @@ function SearchBar() {
       )}
     </form>
   );
-}
+};
 
-function LeftBlock() {
+const LeftBlock = () => {
   return (
     <div className="h-screen w-72 gap-3 p-3 border-4 border-white">
       <SearchBar />
@@ -69,7 +58,6 @@ function LeftBlock() {
       </div>
     </div>
   );
-}
+};
 
-export { LeftBlock };
-
+export default LeftBlock;

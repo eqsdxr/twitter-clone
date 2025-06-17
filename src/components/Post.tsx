@@ -75,7 +75,7 @@ export const Post: React.FC<PostProps> = ({
                 poster={m.alt}
                 className="max-w-[200px] max-h-[200px] rounded-lg object-cover"
               />
-            )
+            ),
           )}
         </div>
       </div>

@@ -1,18 +1,18 @@
-import {useState, useEffect, useCallback} from "react";
-import {Post} from "./Post.tsx";
+import { useState, useEffect, useCallback } from "react";
+import { Post } from "./Post.tsx";
 import LoadingSpinner from "./Loading.tsx";
 
 const getPostsEndpoint = (feedType: number, username: string) => {
-    switch (feedType) {
-      case 1:
-        return "/api/posts/hashtags";
-      case 2:
-        return `/api/posts/news/`;
-      case 3:
-        return `/api/posts/following/${username}`
-      default:
-        return "/api/posts/all";
-    }
+  switch (feedType) {
+    case 1:
+      return "/api/posts/hashtags";
+    case 2:
+      return `/api/posts/news/`;
+    case 3:
+      return `/api/posts/following/${username}`;
+    default:
+      return "/api/posts/all";
+  }
 };
 
 const usePosts = (feedType: number, username: string) => {
@@ -28,9 +28,11 @@ const usePosts = (feedType: number, username: string) => {
       const res = await fetch(endpoint);
       const data = await res.json();
       if (!res.ok) {
-        throw new Error(data.error || "Something went wrong while fetching posts");
+        throw new Error(
+          data.error || "Something went wrong while fetching posts",
+        );
       }
-      setPosts(data)
+      setPosts(data);
     } catch (err: any) {
       setError(err.Message);
     }
@@ -39,28 +41,29 @@ const usePosts = (feedType: number, username: string) => {
 
   useEffect(() => {
     fetchPosts();
-  }, [fetchPosts])
+  }, [fetchPosts]);
 
-  return { posts, isLoading, error, refetch: fetchPosts}
-}
+  return { posts, isLoading, error, refetch: fetchPosts };
+};
 
-const Feed = (feedType: number, username: string, userID: string) => {
-  const {
-    posts,
-    isLoading,
-    error,
-    refetch,
-  } = usePosts(feedType, username);
+type FeedProps = {
+  feedType: number;
+  username: string;
+};
+
+const Feed: React.FC<FeedProps> = ({ feedType, username }) => {
+  const { posts, isLoading, error, refetch } = usePosts(feedType, username);
 
   return (
     <>
-      {isLoading && (
-        <LoadingSpinner />
-      )}
+      {isLoading && <LoadingSpinner />}
+
       {!isLoading && posts?.length === 0 && (
-        <p className='text-center my-4'>No posts</p>
+        <p className="text-center my-4">No posts</p>
       )}
+
       {error && <p className="text-center my-4 text-red-500">{error}</p>}
+
       {!isLoading && posts && (
         <div className="">
           {posts.map((post) => (
@@ -68,15 +71,8 @@ const Feed = (feedType: number, username: string, userID: string) => {
           ))}
         </div>
       )}
-      <div className="overflow-y w-150 bg-pink-800 border-4 border-white">
-      <div className="flex justify-evenly w-full border-b-4 border-white">
-        <div className="h-12 content-center">Posts</div>
-        <div className="h-12 content-center">Hashtags</div>
-        <div className="h-12 content-center">News</div>
-        </div>
-      </div>
     </>
   );
-}
+};
 
-export {Feed};
+export default Feed;
