@@ -1,7 +1,8 @@
 @import "tailwindcss";
 
-* {
-  margin: 0px;
+#root {
+  margin: auto;
+  display: flex;
 }
 
 :root {
@@ -11,7 +12,8 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  overflow-x: hidden;
+  overflow-y: hidden;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,12 +22,12 @@
 }
 
 body {
-  margin: 0px;
   display: flex;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #4a044e;
+  background-color: #0c0a09;
+  font-family: "Oswald", sans-serif;
 }
 
 h1 {
@@ -33,34 +35,31 @@ h1 {
   line-height: 1.1;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+a {
+  text-decoration: underline;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+a:hover {
+  color: #747bff;
+}
+
+button {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+button:hover {
+  background-color: #747bff;
+}
+
+/* Hide scrollbar in Chrome, Safari, and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar in IE, Edge, and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
