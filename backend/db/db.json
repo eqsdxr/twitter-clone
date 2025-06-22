@@ -1,0 +1,152 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "eqsdxr",
+      "avatar_url": "broken-link",
+      "created_at": "2025-06-20T10:00:00Z"
+    },
+    {
+      "id": 2,
+      "username": "ghtohn",
+      "avatar_url": "broken-link",
+      "created_at": "2025-06-21T08:30:00Z"
+    },
+    {
+      "id": 3,
+      "username": "eqsdxr",
+      "avatar_url": "broken-link",
+      "created_at": "2025-06-20T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "username": "ghtohn",
+      "avatar_url": "broken-link",
+      "created_at": "2025-06-21T08:30:00Z"
+    },
+    {
+      "id": 5,
+      "username": "eqsdxr",
+      "avatar_url": "broken-link",
+      "created_at": "2025-06-20T10:00:00Z"
+    },
+    {
+      "id": 6,
+      "username": "ghtohn",
+      "avatar_url": "broken-link",
+      "created_at": "2025-06-21T08:30:00Z"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "user_id": 1,
+      "content": "What is this strange noise?",
+      "media": [
+        {"type": "img", "link":"https://upload.wikimedia.org/wikipedia/commons/b/b8/Palythoa_caribaeorum_bleached_Emerald_Reef.png"},
+        {"type": "vid", "link":"https://upload.wikimedia.org/wikipedia/commons/transcoded/b/b4/Thessaloniki_Metro_train_leaving_depot_for_the_first_time.webm/Thessaloniki_Metro_train_leaving_depot_for_the_first_time.webm.1080p.vp9.webm"}
+      ],
+      "created_at": "2025-06-21T12:00:00Z"
+    },
+    {
+      "id": 2,
+      "user_id": 2,
+      "content": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "media": [],
+      "created_at": "2025-06-21T12:05:00Z"
+    },
+    {
+      "id": 3,
+      "user_id": 1,
+      "content": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "media": [],
+      "created_at": "2025-06-21T12:00:00Z"
+    },
+    {
+      "id": 4,
+      "user_id": 2,
+      "content": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "media": [],
+      "created_at": "2025-06-21T12:05:00Z"
+    },
+    {
+      "id": 5,
+      "user_id": 1,
+      "content": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "media": [],
+      "created_at": "2025-06-21T12:00:00Z"
+    },
+    {
+      "id": 6,
+      "user_id": 2,
+      "content": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "media": [],
+      "created_at": "2025-06-21T12:05:00Z"
+    },
+    {
+      "id": 7,
+      "user_id": 1,
+      "content": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "media": [],
+      "created_at": "2025-06-21T12:00:00Z"
+    },
+    {
+      "id": 8,
+      "user_id": 2,
+      "content": "The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.",
+      "media": [],
+      "created_at": "2025-06-21T12:05:00Z"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "post_id": 1,
+      "user_id": 2,
+      "content": "Welcome AliceWhat is this strange noise?!What is this strange noise?",
+      "created_at": "2025-06-21T12:01:00Z"
+    },
+    {
+      "id": 2,
+      "post_id": 2,
+      "user_id": 1,
+      "content": "Thanks BobWhat is this strange noise?What is this strange noise?What is this strange noise?!",
+      "created_at": "2025-06-21T12:06:00Z"
+    },
+    {
+      "id": 3,
+      "post_id": 2,
+      "user_id": 1,
+      "content": "Thanks BobWhat is this strange noise?What is this strange noise?What is this strange noise?!",
+      "created_at": "2025-06-21T12:06:00Z"
+    },
+    {
+      "id": 4,
+      "post_id": 2,
+      "user_id": 1,
+      "content": "Thanks BobWhat is this strange noise?What is this strange noise?What is this strange noise?!",
+      "created_at": "2025-06-21T12:06:00Z"
+    },
+    {
+      "id": 5,
+      "post_id": 2,
+      "user_id": 1,
+      "content": "Thanks BobWhat is this strange noise?What is this strange noise?What is this strange noise?!",
+      "created_at": "2025-06-21T12:06:00Z"
+    },
+    {
+      "id": 6,
+      "post_id": 1,
+      "user_id": 1,
+      "content": "Thanks BobWhat is this strange noise?What is this strange noise?What is this strange noise?!",
+      "created_at": "2025-06-21T12:06:00Z"
+    },
+    {
+      "id": 7,
+      "post_id": 1,
+      "user_id": 1,
+      "content": "Thanks BobWhat is this strange noise?What is this strange noise?What is this strange noise?!",
+      "created_at": "2025-06-21T12:06:00Z"
+    }
+  ]
+}

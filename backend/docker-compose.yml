@@ -1,0 +1,13 @@
+services:
+  api:
+    build: ./src/
+    container_name: api_container
+    env_file:
+      - "./.env"
+    ports:
+      - "9002:5000"
+    volumes:
+      - logs:/app/logs
+
+volumes:
+  logs:
