@@ -2,7 +2,7 @@ import fillerSvg from "../assets/filler.svg";
 
 const RightBlock = () => {
   return (
-    <div className="w-74 text-white p-2">
+    <div className="w-74 text-white p-2 pl-4">
       <div className="flex text-2xl">
         <img src={fillerSvg} className="w-12 h-12 content-center" />
         <span className="content-center">Unknown</span>
